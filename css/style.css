@@ -1,0 +1,16 @@
+#mainNav{
+    border-bottom: 8px solid #18BC9C;    
+}
+
+#skipnav{
+    margin-bottom: 80px;
+}
+
+#profile-img {
+    text-align: center;
+}
+
+#profile-img .img-responsive{
+    display: -webkit-inline-box;
+    margin-bottom: 25px;
+}
