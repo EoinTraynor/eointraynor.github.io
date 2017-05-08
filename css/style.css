@@ -14,3 +14,15 @@
     display: -webkit-inline-box;
     margin-bottom: 25px;
 }
+#profile-img .btn-outline{
+    color: #233140;
+    border-color: #233140;
+}
+#profile-img .btn-outline:hover{
+    color: #18BC9C;
+    background-color: #233140;
+}
+#contact-details{
+    text-align: left;
+    padding-left: 25px;
+}
