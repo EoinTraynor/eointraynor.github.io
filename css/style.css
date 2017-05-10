@@ -1,5 +1,5 @@
 #mainNav{
-    border-bottom: 8px solid #18BC9C;    
+    border-bottom: 8px solid #18BC9C;
 }
 
 #skipnav{
@@ -13,6 +13,9 @@
 #profile-img .img-responsive{
     display: -webkit-inline-box;
     margin-bottom: 25px;
+    /*colored border*/
+    border: 2px solid #233140;
+    -webkit-border-radius: 100%;
 }
 #profile-img .btn-outline{
     color: #233140;
@@ -23,6 +26,12 @@
     background-color: #233140;
 }
 #contact-details{
+    padding: 10px 0;
+    display: inline-block;
     text-align: left;
-    padding-left: 25px;
+    /*padding-left: 50px;*/
+}
+
+#description{
+    padding-top: 30px;
 }
