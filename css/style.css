@@ -8,12 +8,14 @@
 
 #profile-img {
     text-align: center;
+    margin: auto;
+    /*max-width: 485px;*/
 }
 
 #profile-img .img-responsive{
     display: -webkit-inline-box;
-    margin-bottom: 25px;
-    /*max-width: 500px;*/
+    margin-bottom: 15px;
+    max-width: 350px;
     /*colored border*/
     border: 2px solid #233140;
     -webkit-border-radius: 100%;
@@ -37,7 +39,13 @@
     padding-top: 30px;
 }
 
+#personal-description{
+    padding: 0 30px;
+}
+
 #resume{
     background-color:#18BC9C;
     color: #fff;
+    padding: 10px 12px;
+    margin-top: 15px;
 }
