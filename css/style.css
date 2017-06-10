@@ -40,7 +40,11 @@
 }
 
 #personal-description{
-    padding: 0 30px;
+    /*margin: 0 15px;*/
+    font-size: 1.2em;
+    background-color:#EFEFEF;
+    padding: 20px 30px;
+    border-radius: 5px;
 }
 
 #resume{
