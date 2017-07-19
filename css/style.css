@@ -14,7 +14,7 @@
 
 #profile-img .img-responsive{
     display: -webkit-inline-box;
-    margin-bottom: 15px;
+    margin: 45px 0 30px 0;
     max-width: 350px;
     /*colored border*/
     border: 2px solid #233140;
@@ -44,7 +44,7 @@
     font-size: 1.2em;
     background-color:#EFEFEF;
     padding: 20px 30px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 #resume{
