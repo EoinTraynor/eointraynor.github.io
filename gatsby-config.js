@@ -18,7 +18,7 @@ module.exports = {
     logoText: 'Eoin Traynor',
     defaultTheme: 'dark',
     postsPerPage: 5,
-    showMenuItems: 2,
+    showMenuItems: 0,
     menuMoreText: 'Show more',
     mainMenu: [
       {

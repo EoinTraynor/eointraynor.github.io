@@ -4,20 +4,20 @@ import { graphql } from 'gatsby'
 import SEO from '../components/seo'
 import Layout from '../components/layout'
 import About from '../components/about'
-import Post from '../components/post'
+// import Post from '../components/post'
 import Navigation from '../components/navigation'
 
-const Index = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
-  const {
-    allMarkdownRemark: { edges: posts },
-  } = data
+const Index = ({ pageContext: { nextPagePath, previousPagePath } }) => 
+  // const {
+  //   allMarkdownRemark: { edges: posts },
+  // } = data
 
-  return (
+  (
     <>
       <SEO />
       <Layout>
         <About />
-        {posts.map(({ node }) => {
+        {/* {posts.map(({ node }) => {
           const {
             id,
             excerpt: autoExcerpt,
@@ -44,7 +44,7 @@ const Index = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
               excerpt={excerpt || autoExcerpt}
             />
           )
-        })}
+        })} */}
 
         <Navigation
           previousPath={previousPagePath}
@@ -55,10 +55,10 @@ const Index = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
       </Layout>
     </>
   )
-}
+
 
 Index.propTypes = {
-  data: PropTypes.object.isRequired,
+  // data: PropTypes.object.isRequired,
   pageContext: PropTypes.shape({
     nextPagePath: PropTypes.string,
     previousPagePath: PropTypes.string,
