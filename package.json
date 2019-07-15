@@ -20,6 +20,7 @@
     "format": "prettier --write \"src/**/*.js\"",
     "nuke": "rm -rf node_modules package-lock.json",
     "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
     "test": "eslint src"
   },
   "dependencies": {
