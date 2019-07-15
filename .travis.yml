@@ -1,0 +1,12 @@
+language: node_js
+
+node_js:
+  - "stable"
+
+before_script:
+  - "npm i -g gatsby-cli"
+  - "npm i"
+
+script:
+  - "npm run test"
+  - "npm run build"
