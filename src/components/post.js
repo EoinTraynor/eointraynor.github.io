@@ -59,7 +59,10 @@ const Post = ({
           </>
         ) : (
           <>
-            <div dangerouslySetInnerHTML={{ __html: html }} />
+            <div
+              // eslint-disable-next-line
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
             <Navigation
               previousPath={previousPath}
               previousLabel={previousLabel}

@@ -5,6 +5,7 @@ const Footer = ({ copyrights }) => (
   <footer>
     {copyrights ? (
       <div
+        // eslint-disable-next-line
         dangerouslySetInnerHTML={{
           __html: copyrights,
         }}
