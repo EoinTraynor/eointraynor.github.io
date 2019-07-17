@@ -4,6 +4,7 @@ const postCSSUrl = require('postcss-url')
 const postCSSImports = require('postcss-import')
 const cssnano = require('cssnano')
 const postCSSMixins = require('postcss-mixins')
+// const gatsbyMaifest = require()
 
 module.exports = {
   siteMetadata: {
@@ -38,6 +39,19 @@ module.exports = {
   plugins: [
     `babel-preset-gatsby`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Eoin Traynor PWA`,
+        short_name: `ET PWA`,
+        start_url: `/`,
+        background_color: `#292a2d`,
+        theme_color: `#292a2d`,
+        display: `minimal-ui`,
+        icon: `src/images/hello-icon.png`,
+      },
+    },
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -109,18 +123,6 @@ module.exports = {
             },
           },
         ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby-starter-hello-friend`,
-        short_name: `hello-friend`,
-        start_url: `/`,
-        background_color: `#292a2d`,
-        theme_color: `#292a2d`,
-        display: `minimal-ui`,
-        icon: `src/images/hello-icon.png`,
       },
     },
   ],
