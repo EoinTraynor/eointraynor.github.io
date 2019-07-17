@@ -4,7 +4,6 @@ const postCSSUrl = require('postcss-url')
 const postCSSImports = require('postcss-import')
 const cssnano = require('cssnano')
 const postCSSMixins = require('postcss-mixins')
-// const gatsbyMaifest = require()
 
 module.exports = {
   siteMetadata: {
