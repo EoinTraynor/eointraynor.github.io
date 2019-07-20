@@ -12,4 +12,5 @@ script:
   - "npm run build"
 
 after_success:
+  - chmod +x ./scripts/lighthouse.sh
   - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then ./scripts/lighthouse.sh ; fi'
