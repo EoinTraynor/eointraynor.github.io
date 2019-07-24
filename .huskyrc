@@ -1,0 +1,5 @@
+{
+  'hooks': {
+    'pre-commit': 'echo "running hooks with Husky 🐶" && npm run test'
+  }
+}
