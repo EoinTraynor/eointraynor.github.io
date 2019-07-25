@@ -21,7 +21,8 @@
     "nuke": "rm -rf node_modules package-lock.json",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
-    "test": "eslint src"
+    "test": "eslint src",
+    "lh": "lighthousebot"
   },
   "dependencies": {
     "gatsby": "^2.0.76",
@@ -58,6 +59,7 @@
     "eslint-plugin-react-hooks": "^1.4.0",
     "gatsby-remark-embed-video": "^1.7.0",
     "husky": "^3.0.1",
+    "lighthousebot": "git+https://github.com/GoogleChromeLabs/lighthousebot.git",
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
     "postcss-mixins": "^6.2.1",
