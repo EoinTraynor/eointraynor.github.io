@@ -1,14 +1,19 @@
+import styled from '@emotion/styled'
 import Head from 'next/head'
-import Container from '../components/container'
 import Layout from '../components/layout'
 import { getAllPosts } from '../lib/api'
 import Post from '../types/post'
-
 type Props = {
   allPosts: Post[]
 }
 
-
+const Container = styled.div``
+const Main = styled.main``
+const Title = styled.h1`
+  padding: 32px;
+  background-color: hotpink;
+  font-size: 24px;
+`
 const Index = ({ allPosts }: Props) => {
   const heroPost = allPosts[0]
   const morePosts = allPosts.slice(1)
@@ -20,7 +25,9 @@ const Index = ({ allPosts }: Props) => {
           <title>{pageTitle}</title>
         </Head>
         <Container>
-          <h1>Hello</h1>
+          <Main>
+            <Title>Hello</Title>
+          </Main>
         </Container>
       </Layout>
     </>
