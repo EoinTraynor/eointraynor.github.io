@@ -1,6 +1,9 @@
 import Head from 'next/head'
 import Container from '../components/container'
+import HeroPost from '../components/hero-post'
+import Intro from '../components/intro'
 import Layout from '../components/layout'
+import MoreStories from '../components/more-stories'
 import { getAllPosts } from '../lib/api'
 import Post from '../types/post'
 
@@ -20,7 +23,18 @@ const Index = ({ allPosts }: Props) => {
           <title>{pageTitle}</title>
         </Head>
         <Container>
-          <h1>Hello</h1>
+          <Intro />
+          {heroPost && (
+            <HeroPost
+              title={heroPost.title}
+              coverImage={heroPost.coverImage}
+              date={heroPost.date}
+              author={heroPost.author}
+              slug={heroPost.slug}
+              excerpt={heroPost.excerpt}
+            />
+          )}
+          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         </Container>
       </Layout>
     </>

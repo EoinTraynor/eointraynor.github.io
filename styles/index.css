@@ -1,6 +1,12 @@
 @tailwind base;
 
 /* Write your own custom base styles here */
+/* Global Styles */
+html,
+body {
+  font-family: fantasy
+}
+
 
 /* Start purging... */
 @tailwind components;
