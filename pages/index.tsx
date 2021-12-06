@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
 import Head from 'next/head'
-import Layout from '../components/layout'
 import Post from '../types/post'
 type Props = {
   allPosts: Post[]
@@ -58,16 +57,15 @@ const Index = ({ allPosts }: Props) => {
   const morePosts = allPosts.slice(1)
 
   const pageTitle: string = 'Eoin Traynor Website';
-  console.log({heroPost, morePosts});
+  const blogPosts: string = 'Blog Posts';
+
   return (
-    <>
-      <Layout>
+      <Container>
         <Head>
           <title>{pageTitle}</title>
         </Head>
-        <Container>
           <Main>
-            <BlogTitle>{heroPost.title}</BlogTitle>
+            <BlogTitle>{blogPosts}</BlogTitle>
             <List>
               { allPosts.map(post => (
                 <ListItem key={post.id}>
@@ -77,9 +75,7 @@ const Index = ({ allPosts }: Props) => {
             </List>
             <p></p>
           </Main>
-        </Container>
-      </Layout>
-    </>
+      </Container>
   )
 }
 
