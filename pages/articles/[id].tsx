@@ -1,16 +1,24 @@
 import { Article } from '@components/Article';
+import { FeedbackForm } from '@components/feedback-form';
 import { PostImage } from '@components/post-image';
 import { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from 'next';
+import Head from 'next/head';
 import PostType from '../../types/post';
 
 export default function BlogPost({
   post,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+  const { body, title } = post;
   return (
     <Article>
+      <Head>
+        <title>{title}</title>
+        <meta property='og:title' content={post.title} />
+      </Head>
       <PostImage src='/assets/blog/preview/cover.jpg' alt={post.title} />
       <h1>{post.title}</h1>
       <p>{post.body}</p>
+      <FeedbackForm />
     </Article>
   );
 }
