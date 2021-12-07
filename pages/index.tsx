@@ -1,6 +1,7 @@
-import styled from '@emotion/styled'
-import Head from 'next/head'
-import Post from '../types/post'
+import styled from '@emotion/styled';
+import Head from 'next/head';
+import Link from 'next/link';
+import Post from '../types/post';
 type Props = {
   allPosts: Post[]
 }
@@ -66,11 +67,14 @@ const Index = ({ allPosts }: Props) => {
         </Head>
           <Main>
             <BlogTitle>{blogPosts}</BlogTitle>
+            <Link href={"/about"}>About this blog</Link>
             <List>
               { allPosts.map(post => (
-                <ListItem key={post.id}>
-                  <PostTitle>{post.title}</PostTitle>
-                </ListItem>
+                <Link key={post.id} href={"/articles/[id]"} as={`/articles/${post.id}`}>
+                  <ListItem>
+                    <PostTitle>{post.title}</PostTitle>
+                  </ListItem>
+                </Link>
               ))}
             </List>
             <p></p>

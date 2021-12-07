@@ -1,4 +1,5 @@
 import { Article } from '@components/Article';
+import { PostImage } from '@components/post-image';
 import { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from 'next';
 import PostType from '../../types/post';
 
@@ -7,6 +8,7 @@ export default function BlogPost({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Article>
+      <PostImage src='/assets/blog/preview/cover.jpg' alt={post.title} />
       <h1>{post.title}</h1>
       <p>{post.body}</p>
     </Article>
