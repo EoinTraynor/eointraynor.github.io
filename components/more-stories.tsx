@@ -1,8 +1,8 @@
+import ExtendedPost from '../types/extendedPost'
 import PostPreview from './post-preview'
-import Post from '../types/post'
 
 type Props = {
-  posts: Post[]
+  posts: ExtendedPost[]
 }
 
 const MoreStories = ({ posts }: Props) => {
