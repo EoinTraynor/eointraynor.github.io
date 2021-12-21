@@ -1,7 +1,7 @@
 # Next Steps
-- [ ] Build Landing Page
-- [ ] Successful deployment through Netlify
-- [ ] Linting + Prettier
+
+- [x] Build Landing Page
+- [x] Successful deployment through Netlify
+- [x] Linting + Prettier
 - [ ] Husky
 - [ ] Close Travis Pipeline
-

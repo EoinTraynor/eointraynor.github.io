@@ -70,14 +70,13 @@ const Index = ({ allPosts }: Props) => {
             <Link href={"/about"}>About this blog</Link>
             <List>
               { allPosts.map(post => (
-                <Link key={post.id} href={"/articles/[id]"} as={`/articles/${post.id}`}>
+                <Link key={post.id} href={"/articles/[id]"} as={`/articles/${post.id}`} passHref>
                   <ListItem>
                     <PostTitle>{post.title}</PostTitle>
                   </ListItem>
                 </Link>
               ))}
             </List>
-            <p></p>
           </Main>
       </Container>
   )

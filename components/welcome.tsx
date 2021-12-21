@@ -4,7 +4,7 @@ const Welcome = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.typingAnimation}>
-        I'm Eoin! Welcome to my site 👋
+        Welcome 👋
       </div>
     </div>
   )
