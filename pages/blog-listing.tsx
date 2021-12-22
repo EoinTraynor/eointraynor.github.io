@@ -3,8 +3,8 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Post from '../types/post';
 type Props = {
-  allPosts: Post[]
-}
+  allPosts: Post[];
+};
 
 const Container = styled.div`
   min-height: 100vh;
@@ -31,8 +31,6 @@ const BlogTitle = styled.h1`
   text-align: center;
 `;
 
-const title: string = "My awesome blog";
-
 const List = styled.ul`
   list-style: square;
 `;
@@ -54,35 +52,37 @@ const PostTitle = styled.h2`
 `;
 
 const Index = ({ allPosts }: Props) => {
-  const heroPost = allPosts[0]
-  const morePosts = allPosts.slice(1)
-
-  const pageTitle: string = 'Eoin Traynor Website';
-  const blogPosts: string = 'Blog Posts';
+  const pageTitle = 'Eoin Traynor Website';
+  const blogPosts = 'Blog Posts';
 
   return (
-      <Container>
-        <Head>
-          <title>{pageTitle}</title>
-        </Head>
-          <Main>
-            <BlogTitle>{blogPosts}</BlogTitle>
-            <Link href={"/about"}>About this blog</Link>
-            <List>
-              { allPosts.map(post => (
-                <Link key={post.id} href={"/articles/[id]"} as={`/articles/${post.id}`} passHref>
-                  <ListItem>
-                    <PostTitle>{post.title}</PostTitle>
-                  </ListItem>
-                </Link>
-              ))}
-            </List>
-          </Main>
-      </Container>
-  )
-}
+    <Container>
+      <Head>
+        <title>{pageTitle}</title>
+      </Head>
+      <Main>
+        <BlogTitle>{blogPosts}</BlogTitle>
+        <Link href={'/about'}>About this blog</Link>
+        <List>
+          {allPosts.map((post) => (
+            <Link
+              key={post.id}
+              href={'/articles/[id]'}
+              as={`/articles/${post.id}`}
+              passHref
+            >
+              <ListItem>
+                <PostTitle>{post.title}</PostTitle>
+              </ListItem>
+            </Link>
+          ))}
+        </List>
+      </Main>
+    </Container>
+  );
+};
 
-export default Index
+export default Index;
 
 export const getStaticProps = async () => {
   const response = await fetch('https://jsonplaceholder.typicode.com/posts');
@@ -91,5 +91,5 @@ export const getStaticProps = async () => {
     props: {
       allPosts,
     },
-  }
-}
+  };
+};

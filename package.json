@@ -6,6 +6,7 @@
     "start": "next start",
     "export": "next export",
     "lint": "next lint",
+    "lint:fix": "next lint --fix",
     "typecheck": "tsc",
     "prettier-write": "prettier --write --ignore-unknown ."
   },
