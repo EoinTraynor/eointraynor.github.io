@@ -3,5 +3,5 @@
 - [x] Build Landing Page
 - [x] Successful deployment through Netlify
 - [x] Linting + Prettier
-- [ ] Husky
-- [ ] Close Travis Pipeline
+- [x] Husky
+- [x] Close Travis Pipeline
