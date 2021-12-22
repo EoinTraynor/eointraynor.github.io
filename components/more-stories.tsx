@@ -1,9 +1,9 @@
-import ExtendedPost from '../types/extendedPost'
-import PostPreview from './post-preview'
+import ExtendedPost from '../types/extendedPost';
+import PostPreview from './post-preview';
 
 type Props = {
-  posts: ExtendedPost[]
-}
+  posts: ExtendedPost[];
+};
 
 const MoreStories = ({ posts }: Props) => {
   return (
@@ -25,7 +25,7 @@ const MoreStories = ({ posts }: Props) => {
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default MoreStories
+export default MoreStories;

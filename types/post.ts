@@ -1,4 +1,3 @@
-
 // type PostType = {
 //   slug: string
 //   title: string
@@ -13,10 +12,10 @@
 // }
 
 type PostType = {
-  id: number,
-  userId: number,
-  title: string,
-  body: string,
-}
+  id: number;
+  userId: number;
+  title: string;
+  body: string;
+};
 
-export default PostType
+export default PostType;
