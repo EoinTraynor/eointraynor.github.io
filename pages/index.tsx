@@ -2,7 +2,7 @@ import Welcome from '@components/welcome';
 import Head from 'next/head';
 
 const Index = () => {
-  const pageTitle: string = 'Eoin Traynor Website';
+  const pageTitle = 'Eoin Traynor Website';
   return (
     <>
       <Head>
@@ -12,7 +12,7 @@ const Index = () => {
         <Welcome />
       </main>
     </>
-  )
-}
+  );
+};
 
-export default Index
+export default Index;
