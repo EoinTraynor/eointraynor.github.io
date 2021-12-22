@@ -1,21 +1,20 @@
-import Head from 'next/head'
-import Container from '../components/container'
-import HeroPost from '../components/hero-post'
-import Intro from '../components/intro'
-import Layout from '../components/layout'
-import MoreStories from '../components/more-stories'
-import { getAllPosts } from '../lib/api'
-import ExtendedPost from '../types/extendedPost'
+import Head from 'next/head';
+import Container from '../components/container';
+import HeroPost from '../components/hero-post';
+import Intro from '../components/intro';
+import Layout from '../components/layout';
+import MoreStories from '../components/more-stories';
+import { getAllPosts } from '../lib/api';
+import ExtendedPost from '../types/extendedPost';
 
 type Props = {
-  allPosts: ExtendedPost[]
-}
-
+  allPosts: ExtendedPost[];
+};
 
 const Index = ({ allPosts }: Props) => {
-  const heroPost = allPosts[0]
-  const morePosts = allPosts.slice(1)
-  const pageTitle: string = 'Eoin Traynor Website';
+  const heroPost = allPosts[0];
+  const morePosts = allPosts.slice(1);
+  const pageTitle = 'Eoin Traynor Website';
   return (
     <>
       <Layout>
@@ -38,10 +37,10 @@ const Index = ({ allPosts }: Props) => {
         </Container>
       </Layout>
     </>
-  )
-}
+  );
+};
 
-export default Index
+export default Index;
 
 export const getStaticProps = async () => {
   const allPosts = getAllPosts([
@@ -51,9 +50,9 @@ export const getStaticProps = async () => {
     'author',
     'coverImage',
     'excerpt',
-  ])
+  ]);
 
   return {
     props: { allPosts },
-  }
-}
+  };
+};
