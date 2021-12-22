@@ -4,7 +4,9 @@ module.exports = {
 
   // Lint then format TypeScript and JavaScript files
   '**/*.(ts|tsx|js)': (filenames) => [
-    // `next lint --fix ${filenames.join(' ')}`,
+    `next lint --fix --file ${filenames
+      .map((file) => file.split(process.cwd())[1])
+      .join(' --file ')}`,
     `prettier --write --ignore-unknown ${filenames.join(' ')}`,
   ],
 
