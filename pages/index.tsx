@@ -1,4 +1,5 @@
 import Achievements from '@components/Achievements';
+import Contact from '@components/Contact';
 import Hero from '@components/Hero';
 import PageTemplate from '@components/PageTemplate';
 import SideProjects from '@components/SideProjects';
@@ -12,6 +13,7 @@ const Index = () => {
         <Welcome />
         <Achievements />
         <SideProjects />
+        <Contact />
       </PageTemplate>
     </>
   );
