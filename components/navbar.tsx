@@ -1,7 +1,7 @@
 import { Theme } from '@types';
 import { useTheme } from 'next-themes';
 import { useRouter } from 'next/router';
-import DarkMode from './navbar-dark-mode';
+import DarkMode from './NavbarDarkMode';
 
 const Navbar = () => {
   const router = useRouter();
