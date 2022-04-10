@@ -1,11 +1,7 @@
+import { UserData } from '@types';
 import Link from 'next/link';
 
-type Props = {
-  name: string;
-  jobTitle: string;
-};
-
-const NavbarTitle = ({ name, jobTitle }: Props) => (
+const NavbarTitle = ({ name, jobTitle }: Partial<UserData>) => (
   <Link href="/">
     <a>
       <h1 className="font-semibold text-xl dark:text-gray-100">{name}</h1>
