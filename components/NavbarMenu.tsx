@@ -1,29 +1,17 @@
-import { Theme } from '@types';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
-
-type Props = {
-  changeTheme: () => void;
-  theme: Theme.DARK;
-};
 
 const NavbarMenu = () => {
-  const [mounted, setMounted] = useState(false);
   const router = useRouter();
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
-    <div>
+    <>
       <Link href="/about">
         <a
           className={`text-base  ${
             router.asPath === '/about'
-              ? 'text-gray-800 font-bold dark:text-gray-400'
-              : 'text-gray-600 dark:text-gray-300 font-normal '
+              ? 'light:text-gray-800 font-bold dark:text-gray-400'
+              : 'light:text-gray-600 dark:text-gray-300 font-normal '
           }`}
         >
           About{' '}
@@ -48,8 +36,8 @@ const NavbarMenu = () => {
         <a
           className={`text-base  ${
             router.asPath === '/projects'
-              ? 'text-gray-800 font-bold dark:text-gray-400'
-              : 'text-gray-600 dark:text-gray-300 font-normal '
+              ? 'light:text-gray-800 font-bold dark:text-gray-400'
+              : 'light:text-gray-600 dark:text-gray-300 font-normal '
           }`}
         >
           Projects
@@ -74,8 +62,8 @@ const NavbarMenu = () => {
         <a
           className={`text-base  ${
             router.asPath === '/experience'
-              ? 'text-gray-800 font-bold dark:text-gray-400'
-              : 'text-gray-600 dark:text-gray-300 font-normal '
+              ? 'light:text-gray-800 font-bold dark:text-gray-400'
+              : 'light:text-gray-600 dark:text-gray-300 font-normal '
           }`}
         >
           Experience{' '}
@@ -100,8 +88,8 @@ const NavbarMenu = () => {
         <a
           className={`text-base  ${
             router.asPath === '/contact'
-              ? 'text-gray-800 font-bold dark:text-gray-400'
-              : 'text-gray-600 dark:text-gray-300 font-normal '
+              ? 'light:text-gray-800 font-bold dark:text-gray-400'
+              : 'light:text-gray-600 dark:text-gray-300 font-normal '
           }`}
         >
           Contact
@@ -122,7 +110,7 @@ const NavbarMenu = () => {
           )}
         </a>
       </Link>
-    </div>
+    </>
   );
 };
 
