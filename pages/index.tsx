@@ -1,6 +1,6 @@
-import Hero from 'components/Hero';
-import PageTemplate from 'components/PageTemplate';
-import Welcome from 'components/Welcome';
+import Hero from '@components/Hero';
+import PageTemplate from '@components/PageTemplate';
+import Welcome from '@components/Welcome';
 
 const Index = () => {
   return (
