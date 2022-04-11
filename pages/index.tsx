@@ -1,16 +1,17 @@
-import Welcome from '@components/welcome';
-import Head from 'next/head';
+// import Hero from '@components/Hero';
+import PageTemplate from '@components/PageTemplate';
+import Welcome from '@components/WelcomeAnimation';
 
 const Index = () => {
-  const pageTitle = 'Eoin Traynor Website';
   return (
     <>
-      <Head>
-        <title>{pageTitle}</title>
-      </Head>
-      <main>
+      <PageTemplate>
+        {/* <Hero /> */}
         <Welcome />
-      </main>
+        {/* <Achievements />
+        <SideProjects />
+        <Contact /> */}
+      </PageTemplate>
     </>
   );
 };

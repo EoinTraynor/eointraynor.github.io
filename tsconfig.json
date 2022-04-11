@@ -17,7 +17,9 @@
     "incremental": true,
     "baseUrl": "./",
     "paths": {
-      "@components/*": ["components/*"]
+      "@components/*": ["components/*"],
+      "@types/*": ["@types"],
+      "@constants": ["constants"]
     }
   },
   "exclude": ["node_modules"],
