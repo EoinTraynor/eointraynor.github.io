@@ -1,12 +1,12 @@
-import Hero from '../components/Hero';
-import PageTemplate from '../components/PageTemplate';
-import Welcome from '../components/Welcome';
+// import Hero from '@components/Hero';
+import PageTemplate from '@components/PageTemplate';
+import Welcome from '@components/WelcomeAnimation';
 
 const Index = () => {
   return (
     <>
       <PageTemplate>
-        <Hero />
+        {/* <Hero /> */}
         <Welcome />
         {/* <Achievements />
         <SideProjects />
