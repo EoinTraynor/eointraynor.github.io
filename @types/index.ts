@@ -12,5 +12,6 @@ export type SocialLinks = {
 export type UserData = {
   name: string;
   jobTitle: string;
+  bio: string;
   socialLinks: SocialLinks;
 };

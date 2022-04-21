@@ -3,7 +3,7 @@ import { Theme } from '@types';
 import { useTheme } from 'next-themes';
 import { useRouter } from 'next/router';
 import DarkMode from './NavbarDarkMode';
-// import NavbarMenu from './NavbarMenu';
+import NavbarMenu from './NavbarMenu';
 import NavbarMenuMobile from './NavbarMenuMobile';
 import NavbarSocialLinks from './NavbarSocialLinks';
 import NavbarTitle from './NavbarTitle';
@@ -14,13 +14,15 @@ const Navbar = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <div className="max-w-6xl  mx-auto px-4 py-10 md:py-20">
+    <div className="px-4 py-10 md:py-20">
       <div className="flex  md:flex-row justify-between items-center">
         <div className="flex flex-col">
           <NavbarTitle name={userData.name} jobTitle={userData.jobTitle} />
         </div>
 
-        <div className="space-x-8 hidden md:block">{/* <NavbarMenu /> */}</div>
+        <div className="space-x-8 hidden md:block">
+          <NavbarMenu />
+        </div>
 
         <div className="space-x-4 flex flex-row items-center">
           <NavbarSocialLinks socialLinks={userData.socialLinks} />

@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { FunctionComponent, ReactNode } from 'react';
-import Footer from './Footer';
+// import Footer from './Footer';
 import Navbar from './Navbar/Navbar';
 
 type Props = {
@@ -46,10 +46,10 @@ const PageTemplate: FunctionComponent = ({ children }: Props) => {
           <meta property="article:published_time" content={meta.date} />
         )} */}
       </Head>
-      <main className="dark:bg-gray-800 w-full">
+      <main className="dark:bg-gray-800 w-full max-w-6xl  mx-auto">
         <Navbar />
         <div>{children}</div>
-        <Footer />
+        {/* <Footer /> */}
       </main>
     </>
   );

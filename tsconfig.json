@@ -19,7 +19,8 @@
     "paths": {
       "@components/*": ["components/*"],
       "@types/*": ["@types"],
-      "@constants": ["constants"]
+      "@constants": ["constants"],
+      "@public": ["public"]
     }
   },
   "exclude": ["node_modules"],
