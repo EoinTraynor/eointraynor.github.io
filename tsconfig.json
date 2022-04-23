@@ -20,7 +20,7 @@
       "@components/*": ["components/*"],
       "@types/*": ["@types"],
       "@constants": ["constants"],
-      "@public": ["public"]
+      "@public": ["public/*"]
     }
   },
   "exclude": ["node_modules"],

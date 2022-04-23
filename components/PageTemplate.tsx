@@ -46,7 +46,7 @@ const PageTemplate: FunctionComponent = ({ children }: Props) => {
           <meta property="article:published_time" content={meta.date} />
         )} */}
       </Head>
-      <main className="dark:bg-gray-800 w-full max-w-6xl  mx-auto">
+      <main className="dark:bg-gray-800 w-full max-w-6xl mx-auto">
         <Navbar />
         <div>{children}</div>
         {/* <Footer /> */}
