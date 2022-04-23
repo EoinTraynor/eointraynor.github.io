@@ -19,6 +19,20 @@ body {
 
 /* Write you own custom component styles here */
 
+.btn {
+  @apply inline-block px-5 py-3 rounded-lg bg-accent-7 text-sm
+    text-white uppercase tracking-wider font-semibold sm:text-base;
+}
+.btn:hover {
+  @apply bg-indigo-400;
+}
+.btn:focus {
+  @apply outline-none shadow;
+}
+.btn:active {
+  @apply bg-indigo-600;
+}
+
 /* Start purging... */
 @tailwind utilities;
 /* Stop purging. */
