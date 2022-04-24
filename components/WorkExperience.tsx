@@ -3,7 +3,7 @@ import { FunctionComponent } from 'react';
 const WorkExperience: FunctionComponent = () => {
   return (
     <div className="mt-8 tracking-wider">
-      <h2 className="text-xl">Work Experience</h2>
+      <h2 className="text-2xl">💼 Work Experience.</h2>
       <ul className="list-disc mt-4 list-inside">
         <li>
           Senior Software Engineer at{' '}
@@ -15,7 +15,7 @@ const WorkExperience: FunctionComponent = () => {
           >
             HubSpot
           </a>{' '}
-          (May 2019 - Presen t)
+          (May 2019 - Present)
         </li>
         <li>
           Frontend Engineer at{' '}
