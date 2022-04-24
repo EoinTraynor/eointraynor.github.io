@@ -48,7 +48,7 @@ const PageTemplate: FunctionComponent = ({ children }: Props) => {
       </Head>
       <main className="dark:bg-gray-800 w-full max-w-6xl mx-auto">
         <Navbar />
-        <div>{children}</div>
+        <div className="px-4">{children}</div>
         {/* <Footer /> */}
       </main>
     </>
