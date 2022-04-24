@@ -1,28 +1,27 @@
 import { userData } from '@constants';
 import { Theme } from '@types';
 import { useTheme } from 'next-themes';
-import { useRouter } from 'next/router';
+import { useState } from 'react';
 import DarkMode from './NavbarDarkMode';
+import NavbarHamburger from './NavbarHamburger';
 import NavbarMenu from './NavbarMenu';
-import NavbarMenuMobile from './NavbarMenuMobile';
 import NavbarSocialLinks from './NavbarSocialLinks';
 import NavbarTitle from './NavbarTitle';
 
 const Navbar = () => {
-  const router = useRouter();
-  console.log(router.asPath);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { theme, setTheme } = useTheme();
 
   return (
-    <div className="px-4 py-10 md:py-20">
+    <header className="px-4 py-10 md:py-20">
       <div className="flex  md:flex-row justify-between items-center">
         <div className="flex flex-col">
           <NavbarTitle name={userData.name} jobTitle={userData.jobTitle} />
         </div>
 
-        <div className="space-x-8 hidden md:block">
+        <nav className="space-x-8 hidden md:block">
           <NavbarMenu />
-        </div>
+        </nav>
 
         <div className="space-x-4 flex flex-row items-center">
           <NavbarSocialLinks socialLinks={userData.socialLinks} />
@@ -32,12 +31,18 @@ const Navbar = () => {
             }
             theme={theme}
           />
+          <NavbarHamburger
+            clickHamburger={() => setIsDropdownOpen(!isDropdownOpen)}
+            isDropdownOpen={isDropdownOpen}
+          />
         </div>
       </div>
-      <div className="space-x-8 block md:hidden mt-4">
-        <NavbarMenuMobile />
-      </div>
-    </div>
+      {isDropdownOpen && (
+        <nav className="space-x-8 block md:hidden mt-4">
+          <NavbarMenu />
+        </nav>
+      )}
+    </header>
   );
 };
 
