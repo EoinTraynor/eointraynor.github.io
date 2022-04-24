@@ -2,7 +2,7 @@ import { FunctionComponent } from 'react';
 
 const WorkExperience: FunctionComponent = () => {
   return (
-    <div className="mt-8 tracking-wider">
+    <div className="mt-24 tracking-wider">
       <h2 className="text-2xl">💼 Work Experience.</h2>
       <ul className="list-disc mt-4 list-inside">
         <li>

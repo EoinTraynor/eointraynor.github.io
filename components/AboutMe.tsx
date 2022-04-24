@@ -12,8 +12,13 @@ const AboutMe: FunctionComponent = () => {
           <h2 className="text-2xl">⚡ About Me.</h2>
           <p>{userData.bio}</p>
         </div>
-        <div className="h-8">
-          <Image src={profileImage} alt="Profile Image" />
+        <div className="max-w-md px-8">
+          <Image
+            src={profileImage}
+            alt="Profile Image"
+            width={640}
+            height={461}
+          />
         </div>
       </div>
       <WorkExperience />
