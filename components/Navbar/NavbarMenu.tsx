@@ -32,7 +32,7 @@ const NavbarMenu = () => {
           )}
         </a>
       </Link>
-      <Link href="/projects">
+      {/* <Link href="/projects">
         <a
           className={`text-base  ${
             router.asPath === '/projects'
@@ -109,7 +109,7 @@ const NavbarMenu = () => {
             </svg>
           )}
         </a>
-      </Link>
+      </Link> */}
     </>
   );
 };
