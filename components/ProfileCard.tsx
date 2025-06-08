@@ -1,5 +1,5 @@
+import { Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
 import { useState } from 'react';
-import { MapPin, Phone, Mail, Github, Twitter, Linkedin } from 'lucide-react';
 
 const ProfileCard = () => {
   const [activeSection, setActiveSection] = useState('about');
@@ -46,7 +46,7 @@ const ProfileCard = () => {
     }
   };
 
-  const handleSectionChange = (section) => {
+  const handleSectionChange = (section: string) => {
     setActiveSection(section);
   };
 
