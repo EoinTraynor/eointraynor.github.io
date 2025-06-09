@@ -9,7 +9,7 @@ const ProfileCard = () => {
     jobTitle: "Senior Software Engineer",
     avatar: "/assets/profile.jpg",
     coverImage: "/assets/profile.jpg",
-    about: "Passionate software engineer with expertise in full-stack development, cloud architecture, and modern web technologies. I love building scalable applications and solving complex problems with clean, efficient code.",
+    about: "Engineer. Builder. Problem-solver. I lead teams to create secure, reliable, and user-focused products that make a real impact.",
     location: "Berlin, Germany",
     phone: "0932023 32902",
     email: "eointraynor1@gmail.com",
@@ -18,25 +18,25 @@ const ProfileCard = () => {
         year: "2025",
         title: "Senior Software Engineer",
         company: "CrowdStrike",
-        description: "Responsible for the encompassing brand experience."
+        description: "Led teams to build innovative, secure platforms that protect users and data on a global scale."
       },
       {
         year: "2024",
         title: "Senior Software Engineer",
         company: "HubSpot",
-        description: "Onboarding illustrations for App."
+        description: "Drove product growth by championing automation, experimentation, and seamless user experiences."
       },
       {
         year: "2019",
         title: "Frontend Engineer",
         company: "VSware",
-        description: "Developed new conversion funnels and disrupt."
+        description: "Created intuitive features that made everyday tasks easier and more impactful for real people."
       },
       {
         year: "2017",
         title: "Application Developer",
         company: "VigiTrust",
-        description: "Disrupt stumptown retro everyday carry unicorn."
+        description: "Collaborated with clients to simplify complex challenges and deliver secure, scalable solutions."
       },
     ],
     socialLinks: {
