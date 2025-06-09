@@ -15,16 +15,10 @@ const ProfileCard = () => {
     email: "eointraynor1@gmail.com",
     experience: [
       {
-        year: "2017",
-        title: "Application Developer",
-        company: "VigiTrust",
-        description: "Disrupt stumptown retro everyday carry unicorn."
-      },
-      {
-        year: "2019",
-        title: "Frontend Engineer",
-        company: "VSware",
-        description: "Developed new conversion funnels and disrupt."
+        year: "2025",
+        title: "Senior Software Engineer",
+        company: "CrowdStrike",
+        description: "Responsible for the encompassing brand experience."
       },
       {
         year: "2024",
@@ -33,11 +27,17 @@ const ProfileCard = () => {
         description: "Onboarding illustrations for App."
       },
       {
-        year: "2025",
-        title: "Senior Software Engineer",
-        company: "CrowdStrike",
-        description: "Responsible for the encompassing brand experience."
-      }
+        year: "2019",
+        title: "Frontend Engineer",
+        company: "VSware",
+        description: "Developed new conversion funnels and disrupt."
+      },
+      {
+        year: "2017",
+        title: "Application Developer",
+        company: "VigiTrust",
+        description: "Disrupt stumptown retro everyday carry unicorn."
+      },
     ],
     socialLinks: {
       github: "https://github.com/EoinTraynor",
@@ -56,10 +56,10 @@ const ProfileCard = () => {
         return (
           <div className="space-y-6">
             <div>
-              <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+              <h3 className="text-sm font-semibold uppercase tracking-wider mb-3">
                 ABOUT
               </h3>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+              <p className="leading-relaxed">
                 {userData.about}
               </p>
             </div>
@@ -95,7 +95,7 @@ const ProfileCard = () => {
       case 'experience':
         return (
           <div className="space-y-6">
-            <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4">
+            <h3 className="text-sm font-semibold uppercase tracking-wider mb-4">
               WORK EXPERIENCE
             </h3>
             <div className="space-y-6">
@@ -105,10 +105,10 @@ const ProfileCard = () => {
                   <div className="bg-blue-500 text-white text-xs px-2 py-1 rounded-full inline-block mb-2 font-medium">
                     {exp.year}
                   </div>
-                  <h4 className="font-semibold text-gray-800 dark:text-gray-200">
+                  <h4 className="font-semibold">
                     {exp.title} at <span className="text-blue-500">{exp.company}</span>
                   </h4>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">
+                  <p className="text-sm mt-1">
                     {exp.description}
                   </p>
                 </div>
@@ -120,14 +120,14 @@ const ProfileCard = () => {
       case 'contact':
         return (
           <div className="space-y-6">
-            <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4">
+            <h3 className="text-sm font-semibold uppercase tracking-wider mb-4">
               CONTACT
             </h3>
             <div className="space-y-4">
               <div className="flex items-center space-x-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200">
                 <MapPin className="text-blue-500 flex-shrink-0" size={18} />
                 <span className="text-gray-700 dark:text-gray-300 text-sm">
-                  Berlin, Germany
+                  {userData.location}
                 </span>
               </div>
               <div className="flex items-center space-x-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200">
@@ -155,7 +155,7 @@ const ProfileCard = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
+    <div className="max-w-md mx-auto rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
       {/* Header Section */}
       <div className="relative">
         {/* Cover Image */}
@@ -184,16 +184,16 @@ const ProfileCard = () => {
 
       {/* Profile Info */}
       <div className="pt-16 px-6 pb-4 text-center">
-        <h1 className="text-2xl font-bold text-gray-800 dark:text-white mb-1">
+        <h1 className="text-2xl font-bold mb-1">
           {userData.name}
         </h1>
         <h2 className="text-blue-500 font-medium text-sm uppercase tracking-wide mb-2">
           {userData.jobTitle}
         </h2>
-        <div className="flex items-center justify-center space-x-2 text-gray-600 dark:text-gray-400">
+        {/* <div className="flex items-center justify-center space-x-2">
           <MapPin size={14} />
           <span className="text-sm">{userData.location}</span>
-        </div>
+        </div> */}
       </div>
 
       {/* Content Section */}
@@ -216,7 +216,7 @@ const ProfileCard = () => {
             className={`flex-1 py-4 px-2 text-xs font-semibold uppercase tracking-wide transition-all duration-200 ${
               activeSection === section.id
                 ? 'bg-blue-500 text-white'
-                : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-gray-800 dark:hover:text-gray-200'
+                : 'hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-gray-800 dark:hover:text-gray-200'
             }`}
           >
             {section.label}
