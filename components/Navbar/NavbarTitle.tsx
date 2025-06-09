@@ -4,8 +4,8 @@ import Link from 'next/link';
 const NavbarTitle = ({ name, jobTitle }: Partial<UserData>) => (
   <Link href="/">
     <a>
-      <h1 className="font-semibold text-xl dark:text-gray-100">{name}</h1>
-      <p className="text-base font-light light:text-gray-500 dark:text-gray-300">
+      <h1 className="font-semibold text-xl">{name}</h1>
+      <p className="text-base font-light">
         {jobTitle}
       </p>
     </a>

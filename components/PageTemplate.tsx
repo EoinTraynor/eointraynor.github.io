@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { FunctionComponent, ReactNode } from 'react';
-import Footer from './Footer';
 import Navbar from './Navbar/Navbar';
 
 type Props = {
@@ -49,7 +48,7 @@ const PageTemplate: FunctionComponent = ({ children }: Props) => {
       <main className="dark:bg-gray-800 w-full">
         <Navbar />
         <div>{children}</div>
-        <Footer />
+        {/* <Footer /> */}
       </main>
     </>
   );
