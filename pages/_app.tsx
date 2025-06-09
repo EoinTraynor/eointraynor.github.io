@@ -4,7 +4,7 @@ import '../styles/index.css';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider defaultTheme="dark" attribute="class">
+    <ThemeProvider defaultTheme="system" attribute="class">
       <Component {...pageProps} />
     </ThemeProvider>
   );

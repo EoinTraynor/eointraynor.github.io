@@ -4,7 +4,6 @@ import { useTheme } from 'next-themes';
 import { useRouter } from 'next/router';
 import DarkMode from './NavbarDarkMode';
 // import NavbarMenu from './NavbarMenu';
-import NavbarMenuMobile from './NavbarMenuMobile';
 import NavbarSocialLinks from './NavbarSocialLinks';
 import NavbarTitle from './NavbarTitle';
 
@@ -32,9 +31,9 @@ const Navbar = () => {
           />
         </div>
       </div>
-      <div className="space-x-8 block md:hidden mt-4">
+      {/* <div className="space-x-8 block md:hidden mt-4">
         <NavbarMenuMobile />
-      </div>
+      </div> */}
     </div>
   );
 };
