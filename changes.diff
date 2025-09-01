@@ -1,0 +1,226 @@
+diff --git a/.nvmrc b/.nvmrc
+index f0b10f1..e35b986 100644
+--- a/.nvmrc
++++ b/.nvmrc
+@@ -1 +1 @@
+-v16.13.1
++v24.1.0
+diff --git a/components/Navbar/Navbar.tsx b/components/Navbar/Navbar.tsx
+index 967dca9..e502e84 100644
+--- a/components/Navbar/Navbar.tsx
++++ b/components/Navbar/Navbar.tsx
+@@ -4,7 +4,6 @@ import { useTheme } from 'next-themes';
+ import { useRouter } from 'next/router';
+ import DarkMode from './NavbarDarkMode';
+ // import NavbarMenu from './NavbarMenu';
+-import NavbarMenuMobile from './NavbarMenuMobile';
+ import NavbarSocialLinks from './NavbarSocialLinks';
+ import NavbarTitle from './NavbarTitle';
+ 
+@@ -32,9 +31,9 @@ const Navbar = () => {
+           />
+         </div>
+       </div>
+-      <div className="space-x-8 block md:hidden mt-4">
++      {/* <div className="space-x-8 block md:hidden mt-4">
+         <NavbarMenuMobile />
+-      </div>
++      </div> */}
+     </div>
+   );
+ };
+diff --git a/components/Navbar/NavbarTitle.tsx b/components/Navbar/NavbarTitle.tsx
+index 2e51ca8..3bc9f05 100644
+--- a/components/Navbar/NavbarTitle.tsx
++++ b/components/Navbar/NavbarTitle.tsx
+@@ -4,8 +4,8 @@ import Link from 'next/link';
+ const NavbarTitle = ({ name, jobTitle }: Partial<UserData>) => (
+   <Link href="/">
+     <a>
+-      <h1 className="font-semibold text-xl dark:text-gray-100">{name}</h1>
+-      <p className="text-base font-light light:text-gray-500 dark:text-gray-300">
++      <h1 className="font-semibold text-xl">{name}</h1>
++      <p className="text-base font-light">
+         {jobTitle}
+       </p>
+     </a>
+diff --git a/components/PageTemplate.tsx b/components/PageTemplate.tsx
+index 143b5e9..295fe81 100644
+--- a/components/PageTemplate.tsx
++++ b/components/PageTemplate.tsx
+@@ -1,7 +1,6 @@
+ import Head from 'next/head';
+ import { useRouter } from 'next/router';
+ import { FunctionComponent, ReactNode } from 'react';
+-import Footer from './Footer';
+ import Navbar from './Navbar/Navbar';
+ 
+ type Props = {
+@@ -49,7 +48,7 @@ const PageTemplate: FunctionComponent = ({ children }: Props) => {
+       <main className="dark:bg-gray-800 w-full">
+         <Navbar />
+         <div>{children}</div>
+-        <Footer />
++        {/* <Footer /> */}
+       </main>
+     </>
+   );
+diff --git a/components/ProfileCard.tsx b/components/ProfileCard.tsx
+index b854bda..5840765 100644
+--- a/components/ProfileCard.tsx
++++ b/components/ProfileCard.tsx
+@@ -9,35 +9,35 @@ const ProfileCard = () => {
+     jobTitle: "Senior Software Engineer",
+     avatar: "/assets/profile.jpg",
+     coverImage: "/assets/profile.jpg",
+-    about: "Passionate software engineer with expertise in full-stack development, cloud architecture, and modern web technologies. I love building scalable applications and solving complex problems with clean, efficient code.",
++    about: "Engineer. Builder. Problem-solver. I lead teams to create secure, reliable, and user-focused products that make a real impact.",
+     location: "Berlin, Germany",
+     phone: "0932023 32902",
+     email: "eointraynor1@gmail.com",
+     experience: [
+       {
+-        year: "2017",
+-        title: "Application Developer",
+-        company: "VigiTrust",
+-        description: "Disrupt stumptown retro everyday carry unicorn."
++        year: "2025",
++        title: "Senior Software Engineer",
++        company: "CrowdStrike",
++        description: "Led teams to build innovative, secure platforms that protect users and data on a global scale."
++      },
++      {
++        year: "2024",
++        title: "Senior Software Engineer",
++        company: "HubSpot",
++        description: "Drove product growth by championing automation, experimentation, and seamless user experiences."
+       },
+       {
+         year: "2019",
+         title: "Frontend Engineer",
+         company: "VSware",
+-        description: "Developed new conversion funnels and disrupt."
++        description: "Created intuitive features that made everyday tasks easier and more impactful for real people."
+       },
+       {
+-        year: "2024",
+-        title: "Senior Software Engineer",
+-        company: "HubSpot",
+-        description: "Onboarding illustrations for App."
++        year: "2017",
++        title: "Application Developer",
++        company: "VigiTrust",
++        description: "Collaborated with clients to simplify complex challenges and deliver secure, scalable solutions."
+       },
+-      {
+-        year: "2025",
+-        title: "Senior Software Engineer",
+-        company: "CrowdStrike",
+-        description: "Responsible for the encompassing brand experience."
+-      }
+     ],
+     socialLinks: {
+       github: "https://github.com/EoinTraynor",
+@@ -56,10 +56,10 @@ const ProfileCard = () => {
+         return (
+           <div className="space-y-6">
+             <div>
+-              <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
++              <h3 className="text-sm font-semibold uppercase tracking-wider mb-3">
+                 ABOUT
+               </h3>
+-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
++              <p className="leading-relaxed">
+                 {userData.about}
+               </p>
+             </div>
+@@ -95,7 +95,7 @@ const ProfileCard = () => {
+       case 'experience':
+         return (
+           <div className="space-y-6">
+-            <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4">
++            <h3 className="text-sm font-semibold uppercase tracking-wider mb-4">
+               WORK EXPERIENCE
+             </h3>
+             <div className="space-y-6">
+@@ -105,10 +105,10 @@ const ProfileCard = () => {
+                   <div className="bg-blue-500 text-white text-xs px-2 py-1 rounded-full inline-block mb-2 font-medium">
+                     {exp.year}
+                   </div>
+-                  <h4 className="font-semibold text-gray-800 dark:text-gray-200">
++                  <h4 className="font-semibold">
+                     {exp.title} at <span className="text-blue-500">{exp.company}</span>
+                   </h4>
+-                  <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">
++                  <p className="text-sm mt-1">
+                     {exp.description}
+                   </p>
+                 </div>
+@@ -120,14 +120,14 @@ const ProfileCard = () => {
+       case 'contact':
+         return (
+           <div className="space-y-6">
+-            <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4">
++            <h3 className="text-sm font-semibold uppercase tracking-wider mb-4">
+               CONTACT
+             </h3>
+             <div className="space-y-4">
+               <div className="flex items-center space-x-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200">
+                 <MapPin className="text-blue-500 flex-shrink-0" size={18} />
+                 <span className="text-gray-700 dark:text-gray-300 text-sm">
+-                  Berlin, Germany
++                  {userData.location}
+                 </span>
+               </div>
+               <div className="flex items-center space-x-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200">
+@@ -155,7 +155,7 @@ const ProfileCard = () => {
+   };
+ 
+   return (
+-    <div className="max-w-md mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
++    <div className="max-w-md mx-auto rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
+       {/* Header Section */}
+       <div className="relative">
+         {/* Cover Image */}
+@@ -184,16 +184,16 @@ const ProfileCard = () => {
+ 
+       {/* Profile Info */}
+       <div className="pt-16 px-6 pb-4 text-center">
+-        <h1 className="text-2xl font-bold text-gray-800 dark:text-white mb-1">
++        <h1 className="text-2xl font-bold mb-1">
+           {userData.name}
+         </h1>
+         <h2 className="text-blue-500 font-medium text-sm uppercase tracking-wide mb-2">
+           {userData.jobTitle}
+         </h2>
+-        <div className="flex items-center justify-center space-x-2 text-gray-600 dark:text-gray-400">
++        {/* <div className="flex items-center justify-center space-x-2">
+           <MapPin size={14} />
+           <span className="text-sm">{userData.location}</span>
+-        </div>
++        </div> */}
+       </div>
+ 
+       {/* Content Section */}
+@@ -216,7 +216,7 @@ const ProfileCard = () => {
+             className={`flex-1 py-4 px-2 text-xs font-semibold uppercase tracking-wide transition-all duration-200 ${
+               activeSection === section.id
+                 ? 'bg-blue-500 text-white'
+-                : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-gray-800 dark:hover:text-gray-200'
++                : 'hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-gray-800 dark:hover:text-gray-200'
+             }`}
+           >
+             {section.label}
+diff --git a/pages/_app.tsx b/pages/_app.tsx
+index 26176b2..0477bdf 100644
+--- a/pages/_app.tsx
++++ b/pages/_app.tsx
+@@ -4,7 +4,7 @@ import '../styles/index.css';
+ 
+ export default function MyApp({ Component, pageProps }: AppProps) {
+   return (
+-    <ThemeProvider defaultTheme="dark" attribute="class">
++    <ThemeProvider defaultTheme="system" attribute="class">
+       <Component {...pageProps} />
+     </ThemeProvider>
+   );
