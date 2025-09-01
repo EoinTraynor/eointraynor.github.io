@@ -1,5 +1,6 @@
 import { Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
 import { useState } from 'react';
+import Image from 'next/image';
 
 const ProfileCard = () => {
   const [activeSection, setActiveSection] = useState('about');
@@ -173,9 +174,11 @@ const ProfileCard = () => {
         {/* Avatar */}
         <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2">
           <div className="w-24 h-24 rounded-full border-4 border-white dark:border-gray-800 overflow-hidden shadow-xl">
-            <img
+            <Image
               src={userData.avatar}
               alt="avatar"
+              width={96}
+              height={96}
               className="w-full h-full object-cover"
             />
           </div>

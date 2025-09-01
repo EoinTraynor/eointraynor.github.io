@@ -1,13 +1,13 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { FunctionComponent, ReactNode } from 'react';
+import { ReactNode } from 'react';
 import Navbar from './Navbar/Navbar';
 
 type Props = {
   children?: ReactNode;
 };
 
-const PageTemplate: FunctionComponent = ({ children }: Props) => {
+const PageTemplate = ({ children }: Props) => {
   const router = useRouter();
 
   const meta = {
