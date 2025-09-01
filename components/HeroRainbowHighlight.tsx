@@ -1,7 +1,7 @@
-import { FunctionComponent } from 'react';
 import { RoughNotation } from 'react-rough-notation';
+import { PropsWithChildren } from 'react';
 
-const HeroRainbowHighlight: FunctionComponent = ({ children }) => {
+const HeroRainbowHighlight = ({ children }: PropsWithChildren) => {
   const length = 1000;
   const animationDuration = Math.floor(30 * length);
   const colors = ['#F59E0B', '#84CC16', '#10B981', '#3B82F6'];
