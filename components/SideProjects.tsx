@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { FunctionComponent } from 'react';
 import coverPic from '../public/assets/blog/preview/cover.jpg';
 
@@ -19,11 +19,14 @@ const SideProjects: FunctionComponent = () => {
             className="w-full block shadow-2xl"
           >
             <div className="relative overflow-hidden">
-              <Image
-                src={coverPic}
-                alt="portfolio"
-                className="transform hover:scale-125 transition duration-2000 ease-out"
-              />
+              <div className="transform hover:scale-125 transition duration-2000 ease-out">
+                <Image
+                  src={coverPic}
+                  alt="portfolio"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
               <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-red-500 rounded-md px-2">
                 Tailwind Master Kit
               </h1>
