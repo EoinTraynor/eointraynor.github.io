@@ -69,6 +69,10 @@ const currently = [
     body: "Bulgakov's The Master and Margarita (trying to make sense of the talking cat).",
   },
   {
+    label: 'Watching',
+    body: 'The Sopranos (for the third time).',
+  },
+  {
     label: 'Off the Clock',
     body: 'Playing football 3x/week, occasional padel, and daily chess puzzles that refuse to improve my rating.',
   },
@@ -81,7 +85,6 @@ const currently = [
 const links = [
   { label: 'LinkedIn', value: '/in/eointraynor', href: 'https://www.linkedin.com/in/eointraynor' },
   { label: 'GitHub', value: 'github.com/EoinTraynor', href: 'https://github.com/EoinTraynor' },
-  { label: 'Email', value: 'eointraynor1@gmail.com', href: 'mailto:eointraynor1@gmail.com' },
 ];
 
 export default function Home() {
