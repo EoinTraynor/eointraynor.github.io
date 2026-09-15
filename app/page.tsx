@@ -63,28 +63,47 @@ const experience = [
   },
 ];
 
-const currently = [
+interface CurrentlyItem {
+  label: string;
+  body: React.ReactNode;
+}
+
+const currently: CurrentlyItem[] = [
   {
-    label: 'Reading',
-    body: "Bulgakov's The Master and Margarita (trying to make sense of the talking cat).",
+    label: 'Learning',
+    body: 'German — stuck in A2 purgatory and guessing der, die, or das with worse-than-random accuracy.',
   },
   {
-    label: 'Watching',
-    body: 'The Sopranos (for the third time).',
+    label: 'Side Projects',
+    body: 'Maintaining a steady pipeline of ambitious ideas that peak at the domain purchase.',
   },
   {
-    label: 'Off the Clock',
-    body: 'Playing football 3x/week, occasional padel, and daily chess puzzles that refuse to improve my rating.',
+    label: 'Chess',
+    body: (
+      <>
+        Playing blitz on{' '}
+        <a
+          href="https://link.chess.com/friend/JAPYmL"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline decoration-zinc-400 underline-offset-2 transition-colors hover:text-zinc-900 hover:decoration-zinc-900 dark:decoration-zinc-600 dark:hover:text-zinc-100 dark:hover:decoration-zinc-100"
+        >
+          Chess.com
+        </a>{' '}
+        — moving fast to ensure my blunders happen at maximum velocity.
+      </>
+    ),
   },
   {
-    label: 'Gear',
-    body: 'Over-tweaking a Keychron K3 low-profile mechanical keyboard.',
+    label: 'Sport',
+    body: "Cycling through different sports, still actively searching for one I'm actually good at.",
   },
 ];
 
 const links = [
   { label: 'LinkedIn', value: '/in/eointraynor', href: 'https://www.linkedin.com/in/eointraynor' },
   { label: 'GitHub', value: 'github.com/EoinTraynor', href: 'https://github.com/EoinTraynor' },
+  { label: 'Chess.com', value: 'chess.com', href: 'https://link.chess.com/friend/JAPYmL' },
 ];
 
 export default function Home() {
