@@ -71,7 +71,7 @@ interface CurrentlyItem {
 const currently: CurrentlyItem[] = [
   {
     label: 'Learning',
-    body: "Attempting German — third time's the charm.",
+    body: "Attempting German. Third time's the charm.",
   },
   {
     label: 'Side Projects',
