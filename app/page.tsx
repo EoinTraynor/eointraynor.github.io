@@ -1,8 +1,8 @@
 'use client';
 
-import * as React from 'react';
-import { ArrowUpRight, MapPin } from 'lucide-react';
 import { ThemeToggle } from '@/components/theme-toggle';
+import { ArrowUpRight } from 'lucide-react';
+import * as React from 'react';
 
 type Perspective = 'leadership' | 'engineering';
 
@@ -71,11 +71,11 @@ interface CurrentlyItem {
 const currently: CurrentlyItem[] = [
   {
     label: 'Learning',
-    body: 'German — stuck in A2 purgatory and guessing der, die, or das with worse-than-random accuracy.',
+    body: "Attempting German — third time's the charm.",
   },
   {
     label: 'Side Projects',
-    body: 'Maintaining a steady pipeline of ambitious ideas that peak at the domain purchase.',
+    body: 'Maintaining a steady pipeline of ambitious ideas that rarely make it past the domain purchase.',
   },
   {
     label: 'Chess',
@@ -90,13 +90,13 @@ const currently: CurrentlyItem[] = [
         >
           Chess.com
         </a>{' '}
-        — moving fast to ensure my blunders happen at maximum velocity.
+        (always down for a game).
       </>
     ),
   },
   {
     label: 'Sport',
-    body: "Cycling through different sports, still actively searching for one I'm actually good at.",
+    body: "Still actively searching for one I'm actually good at.",
   },
 ];
 
