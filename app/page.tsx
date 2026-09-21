@@ -8,31 +8,31 @@ type Perspective = 'leadership' | 'engineering';
 
 const leadershipPrinciples = [
   {
-    title: 'High-Trust Autonomy',
-    body: 'Setting clear context and guardrails, then getting out of the way.',
+    title: 'Solutions that Scale',
+    body: 'Turning working solutions, both technical and operational, into repeatable patterns others can adopt.',
   },
   {
-    title: 'Velocity via Quality',
-    body: 'Release automation and reliable CI/CD as the foundation for fast shipping.',
+    title: 'Autonomy via Coaching',
+    body: 'Deliberate delegation and coaching that turns capable engineers into self-directed technical owners.',
   },
   {
-    title: 'Scalable Team Topology',
-    body: 'Aligning team ownership directly with core platform architecture.',
+    title: 'Scope via Initiative',
+    body: 'Self-initiated ownership of ambiguous cross-team problems before being asked to solve them.',
   },
 ];
 
 const engineeringHighlights = [
   {
-    title: 'Infrastructure & Delivery',
-    body: 'Scaled automated deployment systems and CI/CD for 100+ microservices.',
+    title: 'Quality as the Standard',
+    body: 'Establishing and enforcing a high quality bar for what ships, so customers get a stable, exceptional experience.',
   },
   {
-    title: 'Platform Reliability',
-    body: 'Data ingestion pipelines, distributed systems, and access management.',
+    title: 'Maintainability by Design',
+    body: 'Structuring systems so they can be extended and evolve without needing to be rebuilt.',
   },
   {
-    title: 'Compliance as Code',
-    body: 'Automated compliance tooling bridging security architecture and regulatory audits.',
+    title: 'Scalability Through Standardisation',
+    body: 'Designing architecture and patterns that scale so that growth is absorbed, not fought against, each time it arrives.',
   },
 ];
 
@@ -133,8 +133,7 @@ export default function Home() {
             </span>
           </div>
           <p className="mt-5 text-[15px] leading-relaxed text-zinc-600 dark:text-zinc-400">
-            Engineering leader focused on team velocity, resilient cloud
-            infrastructure, and enterprise platforms. Ex-HubSpot, currently
+            Engineering leader focused on growing teams and building great products that scale. Currently
             leading platform teams at CrowdStrike.
           </p>
         </header>
