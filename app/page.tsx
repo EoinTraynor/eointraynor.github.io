@@ -83,7 +83,7 @@ const currently: CurrentlyItem[] = [
       <>
         Playing blitz on{' '}
         <a
-          href="https://link.chess.com/friend/URoUve"
+          href="https://www.chess.com/member/rodliddle"
           target="_blank"
           rel="noopener noreferrer"
           className="underline decoration-zinc-400 underline-offset-2 transition-colors hover:text-zinc-900 hover:decoration-zinc-900 dark:decoration-zinc-600 dark:hover:text-zinc-100 dark:hover:decoration-zinc-100"
@@ -103,7 +103,7 @@ const currently: CurrentlyItem[] = [
 const links = [
   { label: 'LinkedIn', value: '/in/eointraynor', href: 'https://www.linkedin.com/in/eointraynor' },
   { label: 'GitHub', value: 'github.com/EoinTraynor', href: 'https://github.com/EoinTraynor' },
-  { label: 'Chess.com', value: 'chess.com', href: 'https://link.chess.com/friend/URoUve' },
+  { label: 'Chess.com', value: 'chess.com', href: 'https://www.chess.com/member/rodliddle' },
 ];
 
 export default function Home() {
